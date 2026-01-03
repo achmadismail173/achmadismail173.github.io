@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ismail — Security Engineer & Backend Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+    <script src="https://cdn.tailwindcss.com  "></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  " />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono  :wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
         body {
@@ -177,12 +177,12 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="text-xl font-bold gradient-text">>_ ISMAIL</div>
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex space-x-6">
                     <a href="#home" class="text-gray-700 hover:text-gray-900 transition-colors">Home</a>
                     <a href="#about" class="text-gray-700 hover:text-gray-900 transition-colors">About</a>
-                    <a href="#skills" class="text-gray-700 hover:text-gray-900 transition-colors">Capabilities</a>
-                    <a href="#projects" class="text-gray-700 hover:text-gray-900 transition-colors">Security Projects</a>
-                    <a href="#blog" class="text-gray-700 hover:text-gray-900 transition-colors">Research & Stories</a>
+                    <a href="#skills" class="text-gray-700 hover:text-gray-900 transition-colors">Offensive Focus</a>
+                    <a href="#projects" class="text-gray-700 hover:text-gray-900 transition-colors">Case Studies</a>
+                    <a href="#blog" class="text-gray-700 hover:text-gray-900 transition-colors">Thinking in Public</a>
                     <a href="#contact" class="text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
                 </div>
                 <div class="md:hidden">
@@ -282,141 +282,123 @@
     </section>
 
     <!-- Skills Section -->
+    <!-- Offensive Focus Section (replaces "Core Competencies") -->
     <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">
-                Core Competencies
+                Offensive Focus
             </h2>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Secure Development -->
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Attack Surface Focus -->
                 <div>
                     <h3 class="text-2xl font-semibold mb-6 text-gray-800">
-                        <i class="fas fa-code mr-2 text-gray-600"></i>Secure Development
+                        <i class="fas fa-skull-crossbones mr-2 text-gray-600"></i>Where I Find Flaws
                     </h3>
                     <div class="space-y-6">
                         <div>
-                            <div class="flex justify-between mb-2 text-gray-700">
-                                <span>Laravel & PHP</span>
-                                <span>92%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
+                            <h4 class="font-bold text-lg text-gray-800 flex items-center">
+                                <i class="fas fa-project-diagram text-gray-600 mr-2"></i>
+                                Business Logic Abuse
+                            </h4>
+                            <p class="text-gray-600 mt-2 leading-relaxed">
+                                Hunting for inconsistencies in state transitions, workflow assumptions, and edge-case
+                                input handling — especially where validation diverges between frontend and backend.
+                            </p>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-2 text-gray-700">
-                                <span>Python (Pentest Scripts)</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
+                            <h4 class="font-bold text-lg text-gray-800 flex items-center">
+                                <i class="fas fa-key text-gray-600 mr-2"></i>
+                                Auth & Session Bypass
+                            </h4>
+                            <p class="text-gray-600 mt-2 leading-relaxed">
+                                Testing identity flows beyond password strength: token integrity, role hierarchies,
+                                session binding, and state leakage across redirects or referrers.
+                            </p>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-2 text-gray-700">
-                                <span>API Hardening</span>
-                                <span>88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2 text-gray-700">
-                                <span>Input Validation</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
+                            <h4 class="font-bold text-lg text-gray-800 flex items-center">
+                                <i class="fas fa-exclamation-triangle text-gray-600 mr-2"></i>
+                                Configuration & Exposure Hunting
+                            </h4>
+                            <p class="text-gray-600 mt-2 leading-relaxed">
+                                Probing for forgotten assets: version control leaks, debug interfaces, staging
+                                environments, and overly permissive headers or CORS policies.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Offensive Security -->
+                <!-- Developer Edge -->
                 <div>
                     <h3 class="text-2xl font-semibold mb-6 text-gray-800">
-                        <i class="fas fa-bug mr-2 text-gray-600"></i>Offensive Security
+                        <i class="fas fa-layer-group mr-2 text-gray-600"></i>My Edge: Developer Insight
                     </h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2 text-gray-700">
-                                <span>Business Logic Abuse</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2 text-gray-700">
-                                <span>Auth/Session Bypass</span>
-                                <span>88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2 text-gray-700">
-                                <span>Vulnerability Reporting</span>
-                                <span>96%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 96%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2 text-gray-700">
-                                <span>Configuration Leaks</span>
-                                <span>92%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <p class="text-gray-700 mb-4">
+                            I don’t just run tools — I reverse-engineer intent.
+                        </p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li>✅ I build APIs → I know how auth flows <em>should</em> work — and where devs cut
+                                corners.</li>
+                            <li>✅ I write Laravel/Node.js → I test <em>beyond</em> regex & scanners.</li>
+                            <li>✅ I read RFCs & source code → I abuse edge cases (e.g. scientific notation, Unicode,
+                                timezones).</li>
+                            <li>✅ I write security fiction → I think like an attacker with <em>motive, not just
+                                    payload</em>.</li>
+                        </ul>
+                        <p class="mt-4 text-sm text-gray-600 italic">
+                            This isn’t a skill. It’s my force multiplier.
+                        </p>
+                    </div>
+
+                    <!-- Optional: add a real story teaser -->
+                    <div class="mt-6 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <p class="text-sm text-gray-700 italic">
+                            🔍 Inspired by my story <em>“Attacker vs Developer”</em> — where a floating-point input
+                            bypassed a payment wall.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tools & Technologies -->
+            <!-- Weaponized Toolkit -->
             <div class="mt-16">
                 <h3 class="text-2xl font-semibold mb-8 text-center text-gray-800">
-                    <i class="fas fa-tools mr-2 text-gray-600"></i>Tools & Technologies
+                    <i class="fas fa-bomb mr-2 text-gray-600"></i>Weaponized Toolkit
                 </h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                     <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas  fa-syringe text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">SQLMap</p>
+                        <i class="fas fa-bug text-3xl text-gray-700 mb-2"></i>
+                        <p class="text-gray-700">Burp Suite</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                         <i class="fab fa-python text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">Python</p>
+                        <p class="text-gray-700">Custom Scripts</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas fa-code-branch text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">git-dumper</p>
+                        <i class="fas fa-fingerprint text-3xl text-gray-700 mb-2"></i>
+                        <p class="text-gray-700">fingerweb</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas fa-database text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">MySQL</p>
+                        <i class="fas fa-key text-3xl text-gray-700 mb-2"></i>
+                        <p class="text-gray-700">jwt_exploit</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                         <i class="fas fa-terminal text-3xl text-gray-700 mb-2"></i>
                         <p class="text-gray-700">Kali Linux</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas fa-bug text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">Burp Suite</p>
+                        <i class="fab fa-git-alt text-3xl text-gray-700 mb-2"></i>
+                        <p class="text-gray-700">git-dumper</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                        <i class="fas fa-database text-3xl text-gray-700 mb-2"></i>
+                        <p class="text-gray-700">SQLMap</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                         <i class="fab fa-docker text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">Docker</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fab fa-git-alt text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">Git</p>
+                        <p class="text-gray-700">Docker (Env Repro)</p>
                     </div>
                 </div>
             </div>
@@ -439,16 +421,20 @@
     <!-- Blog Section -->
     <section id="blog" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">
-                Security Research  & Attack Narrative
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 gradient-text">
+                Thinking in Public
             </h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+                Technical reflections, security fiction, and lessons learned — because the best defenses are built with
+                attacker empathy.
+            </p>
 
             <div id="medium-posts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Medium posts injected here -->
             </div>
 
             <div class="text-center mt-12">
-                <a href="https://medium.com/@goodnightdev" target="_blank"
+                <a href="https://medium.com/@goodnightdev  " target="_blank"
                     class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                     View All Posts
                 </a>
@@ -503,11 +489,12 @@
                     <i class="fas fa-blog text-xl"></i>
                 </a>
             </div>
-            <p class="text-gray-600">&copy; 2025 Ismail — Security Engineer • Pentester • Backend Developer</p>
+            <p class="text-gray-600">&copy; 2025 Ismail — Independent Pentester | Bug Bounty Hunter | Responsible
+                Disclosure Advocate</p>
         </div>
     </footer>
     <script>
-        const MEDIUM_RSS = "https://medium.com/feed/@goodnightdev";
+        const MEDIUM_RSS = "https://medium.com/feed/@goodnightdev  ";
         const GITHUB_USER = "achmadismail173";
         const container_blog = document.getElementById("medium-posts");
         const container_project = document.getElementById("github-projects");
@@ -577,7 +564,7 @@
                 });
         });
 
-        fetch("https://api.allorigins.win/get?url=" + encodeURIComponent(MEDIUM_RSS))
+        fetch("https://api.allorigins.win/get?url=  " + encodeURIComponent(MEDIUM_RSS))
             .then(res => res.json())
             .then(data => {
                 const parser = new DOMParser();
