@@ -564,7 +564,7 @@
                 });
         });
 
-        fetch("https://api.allorigins.win/get?url=  " + encodeURIComponent(MEDIUM_RSS))
+        fetch("https://api.allorigins.win/get?url="+encodeURIComponent(MEDIUM_RSS))
             .then(res => res.json())
             .then(data => {
                 const parser = new DOMParser();
@@ -712,4 +712,5 @@
 
 
 </html>
+
 
