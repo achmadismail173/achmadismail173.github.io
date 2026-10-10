@@ -5,10 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ismail — Security Engineer & Backend Developer</title>
-    <script src="https://cdn.tailwindcss.com  "></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  " />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono  :wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto Mono', monospace;
@@ -17,18 +16,14 @@
             scroll-behavior: smooth;
         }
 
-        /* Typing Effect Styles */
         .typing-container {
             display: inline-block;
             position: relative;
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.125rem;
-            /* text-lg */
             max-width: 36rem;
-            /* max-w-xl */
             margin: 0 auto 2rem auto;
             color: #000;
-            /* white-space: nowrap; */
             white-space: normal;
             overflow: hidden;
             border-right: 2px solid #000;
@@ -44,13 +39,8 @@
         }
 
         @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            100% {
-                background-position: 100% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
         }
 
         .terminal-box {
@@ -67,107 +57,31 @@
             position: absolute;
             top: -12px;
             left: -9px;
-            /* background: #ffffff; */
             padding: 0 5px;
             color: #4a5568;
             font-size: 14px;
         }
 
-        .skill-bar {
-            background: #e2e8f0;
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skill-progress {
-            height: 8px;
-            background: linear-gradient(90deg, #2d3748, #4a5568);
-            border-radius: 4px;
-            transition: width 1s ease-in-out;
-        }
-
-        .project-card {
+        .project-card, .blog-card, .ngorbit-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             transition: all 0.3s ease;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #2d3748;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        .project-card:hover, .blog-card:hover, .ngorbit-card:hover { 
+            transform: translateY(-5px); 
+            border-color: #2d3748; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
         }
 
-        .typewriter {
-            overflow: hidden;
-            border-right: 2px solid #2d3748;
-            white-space: nowrap;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink-caret {
-
-            from,
-            to {
-                border-color: transparent;
-            }
-
-            50% {
-                border-color: #2d3748;
-            }
-        }
-
-        .code-icon {
-            font-size: 4rem;
-            color: #2d3748;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .blog-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .blog-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-divider {
-            border-top: 2px solid #e2e8f0;
-            margin: 80px auto;
-            width: 80px;
-        }
+        .code-icon { font-size: 4rem; color: #2d3748; animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes blink-caret { from, to { border-color: transparent; } 50% { border-color: #2d3748; } }
     </style>
 </head>
 
@@ -177,18 +91,17 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="text-xl font-bold gradient-text">>_ ISMAIL</div>
-                <div class="hidden md:flex space-x-6">
+                <div class="hidden md:flex space-x-6 text-sm font-medium">
                     <a href="#home" class="text-gray-700 hover:text-gray-900 transition-colors">Home</a>
                     <a href="#about" class="text-gray-700 hover:text-gray-900 transition-colors">About</a>
                     <a href="#skills" class="text-gray-700 hover:text-gray-900 transition-colors">Offensive Focus</a>
                     <a href="#projects" class="text-gray-700 hover:text-gray-900 transition-colors">Case Studies</a>
-                    <a href="#blog" class="text-gray-700 hover:text-gray-900 transition-colors">Thinking in Public</a>
+                    <a href="#ngorbit" class="text-gray-700 hover:text-gray-900 transition-colors">NgorbIT</a>
+                    <a href="#blog" class="text-gray-700 hover:text-gray-900 transition-colors">Fiction</a>
                     <a href="#contact" class="text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
                 </div>
                 <div class="md:hidden">
-                    <button class="text-gray-700">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                    <button class="text-gray-700"><i class="fas fa-bars text-xl"></i></button>
                 </div>
             </div>
         </div>
@@ -198,21 +111,15 @@
     <section id="home" class="min-h-screen flex items-center justify-center pt-20">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-8">
-                <div class="code-icon mx-auto mb-6">
-                    <i class="fas fa-terminal"></i>
-                </div>
+                <div class="code-icon mx-auto mb-6"><i class="fas fa-terminal"></i></div>
             </div>
             <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
                 <span>Security Engineer & Backend Developer</span>
             </h1>
             <div id="typing-text" class="typing-container"></div>
             <div class="flex justify-center space-x-4">
-                <a href="#projects"
-                    class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">View
-                    Projects</a>
-                <a href="#contact"
-                    class="border border-gray-900 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-colors">Get
-                    In Touch</a>
+                <a href="#projects" class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">View Projects</a>
+                <a href="#contact" class="border border-gray-900 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-colors">Get In Touch</a>
             </div>
         </div>
     </section>
@@ -220,57 +127,41 @@
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">
-                About Me
-            </h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">About Me</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="terminal-box">
                     <div class="text-gray-600 mb-4">
-                        <span class="text-gray-800 font-semibold">dev@portfolio</span>:<span
-                            class="text-blue-600">~</span>$ cat about.txt
+                        <span class="text-gray-800 font-semibold">dev@portfolio</span>:<span class="text-blue-600">~</span>$ cat about.txt
                     </div>
                     <p class="text-gray-700 leading-relaxed">
-                        I’m Ismail — a <strong>backend developer and security researcher</strong> who builds systems,
-                        then tests them like an attacker.
+                        I'm Ismail — a <strong>backend developer and security researcher</strong> who builds systems, then tests them like an attacker.
                     </p><br>
                     <p class="text-gray-700 leading-relaxed">
-                        I specialize in <strong>business logic flaws</strong>, <strong>configuration leaks</strong>
-                        (e.g., exposed <code>.git</code>), and <strong>auth bypasses</strong> — delivering clear reports
-                        with PoC and remediation.
+                        I specialize in <strong>business logic flaws</strong>, <strong>configuration leaks</strong> (e.g., exposed <code>.git</code>), and <strong>auth bypasses</strong> — delivering clear reports with PoC and remediation.
                     </p><br>
                     <p class="text-gray-700 leading-relaxed">
-                        I also write security fiction, like <em>“Attacker vs Developer”</em>, to explore the tension
-                        between building and breaking.
+                        I also write security fiction, like <em>"Attacker vs Developer"</em>, to explore the tension between building and breaking.
                     </p>
-
                     <div class="text-gray-600 mt-4">
-                        <span class="text-gray-800 font-semibold">dev@portfolio</span>:<span
-                            class="text-blue-600">~</span>$ _
+                        <span class="text-gray-800 font-semibold">dev@portfolio</span>:<span class="text-blue-600">~</span>$ _
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
-                    <!-- Card 1: Penetration Testing -->
                     <div class="bg-white p-6 rounded-lg text-center shadow-sm border border-gray-200">
                         <i class="fas fa-bug text-4xl text-gray-700 mb-3"></i>
                         <h3 class="font-semibold mb-2 text-gray-800">Penetration Testing</h3>
                         <p class="text-sm text-gray-600">Black-Box, Logic Flaws, Auth Bypass</p>
                     </div>
-
-                    <!-- Card 2: Secure Backend Development -->
                     <div class="bg-white p-6 rounded-lg text-center shadow-sm border border-gray-200">
                         <i class="fas fa-code text-4xl text-gray-700 mb-3"></i>
                         <h3 class="font-semibold mb-2 text-gray-800">Secure Backend Dev</h3>
                         <p class="text-sm text-gray-600">Slim, API Hardening, Input Validation</p>
                     </div>
-
-                    <!-- Card 3: Security Reporting -->
                     <div class="bg-white p-6 rounded-lg text-center shadow-sm border border-gray-200">
                         <i class="fas fa-file-alt text-4xl text-gray-700 mb-3"></i>
                         <h3 class="font-semibold mb-2 text-gray-800">Security Reporting</h3>
                         <p class="text-sm text-gray-600">Professional Templates, PoC Videos, Remediation</p>
                     </div>
-
-                    <!-- Card 4: Vulnerability Research -->
                     <div class="bg-white p-6 rounded-lg text-center shadow-sm border border-gray-200">
                         <i class="fas fa-search text-4xl text-gray-700 mb-3"></i>
                         <h3 class="font-semibold mb-2 text-gray-800">Vulnerability Research</h3>
@@ -281,125 +172,53 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <!-- Offensive Focus Section (replaces "Core Competencies") -->
+    <!-- Offensive Focus Section -->
     <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">
-                Offensive Focus
-            </h2>
-
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">Offensive Focus</h2>
             <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Attack Surface Focus -->
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">
-                        <i class="fas fa-skull-crossbones mr-2 text-gray-600"></i>Where I Find Flaws
-                    </h3>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800"><i class="fas fa-skull-crossbones mr-2 text-gray-600"></i>Where I Find Flaws</h3>
                     <div class="space-y-6">
                         <div>
-                            <h4 class="font-bold text-lg text-gray-800 flex items-center">
-                                <i class="fas fa-project-diagram text-gray-600 mr-2"></i>
-                                Business Logic Abuse
-                            </h4>
-                            <p class="text-gray-600 mt-2 leading-relaxed">
-                                Hunting for inconsistencies in state transitions, workflow assumptions, and edge-case
-                                input handling — especially where validation diverges between frontend and backend.
-                            </p>
+                            <h4 class="font-bold text-lg text-gray-800 flex items-center"><i class="fas fa-project-diagram text-gray-600 mr-2"></i>Business Logic Abuse</h4>
+                            <p class="text-gray-600 mt-2 leading-relaxed">Hunting for inconsistencies in state transitions, workflow assumptions, and edge-case input handling.</p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-gray-800 flex items-center">
-                                <i class="fas fa-key text-gray-600 mr-2"></i>
-                                Auth & Session Bypass
-                            </h4>
-                            <p class="text-gray-600 mt-2 leading-relaxed">
-                                Testing identity flows beyond password strength: token integrity, role hierarchies,
-                                session binding, and state leakage across redirects or referrers.
-                            </p>
+                            <h4 class="font-bold text-lg text-gray-800 flex items-center"><i class="fas fa-key text-gray-600 mr-2"></i>Auth & Session Bypass</h4>
+                            <p class="text-gray-600 mt-2 leading-relaxed">Testing identity flows beyond password strength: token integrity, role hierarchies, and session binding.</p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-gray-800 flex items-center">
-                                <i class="fas fa-exclamation-triangle text-gray-600 mr-2"></i>
-                                Configuration & Exposure Hunting
-                            </h4>
-                            <p class="text-gray-600 mt-2 leading-relaxed">
-                                Probing for forgotten assets: version control leaks, debug interfaces, staging
-                                environments, and overly permissive headers or CORS policies.
-                            </p>
+                            <h4 class="font-bold text-lg text-gray-800 flex items-center"><i class="fas fa-exclamation-triangle text-gray-600 mr-2"></i>Configuration & Exposure Hunting</h4>
+                            <p class="text-gray-600 mt-2 leading-relaxed">Probing for forgotten assets: version control leaks, debug interfaces, and overly permissive CORS policies.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Developer Edge -->
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">
-                        <i class="fas fa-layer-group mr-2 text-gray-600"></i>My Edge: Developer Insight
-                    </h3>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800"><i class="fas fa-layer-group mr-2 text-gray-600"></i>My Edge: Developer Insight</h3>
                     <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                        <p class="text-gray-700 mb-4">
-                            I don’t just run tools — I reverse-engineer intent.
-                        </p>
+                        <p class="text-gray-700 mb-4">I don't just run tools — I reverse-engineer intent.</p>
                         <ul class="space-y-3 text-gray-700">
-                            <li>✅ I build APIs → I know how auth flows <em>should</em> work — and where devs cut
-                                corners.</li>
+                            <li>✅ I build APIs → I know how auth flows <em>should</em> work.</li>
                             <li>✅ I write Slim/Node.js → I test <em>beyond</em> regex & scanners.</li>
-                            <li>✅ I read RFCs & source code → I abuse edge cases (e.g. scientific notation, Unicode,
-                                timezones).</li>
-                            <li>✅ I write security fiction → I think like an attacker with <em>motive, not just
-                                    payload</em>.</li>
+                            <li>✅ I read RFCs & source code → I abuse edge cases.</li>
+                            <li>✅ I write security fiction → I think like an attacker with <em>motive</em>.</li>
                         </ul>
-                        <p class="mt-4 text-sm text-gray-600 italic">
-                            This isn’t a skill. It’s my force multiplier.
-                        </p>
-                    </div>
-
-                    <!-- Optional: add a real story teaser -->
-                    <div class="mt-6 bg-gray-50 p-4 rounded-lg border border-gray-200">
-                        <p class="text-sm text-gray-700 italic">
-                            🔍 Inspired by my story <em>“Attacker vs Developer”</em> — where a floating-point input
-                            bypassed a payment wall.
-                        </p>
+                        <p class="mt-4 text-sm text-gray-600 italic">This isn't a skill. It's my force multiplier.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Weaponized Toolkit -->
             <div class="mt-16">
-                <h3 class="text-2xl font-semibold mb-8 text-center text-gray-800">
-                    <i class="fas fa-bomb mr-2 text-gray-600"></i>Weaponized Toolkit
-                </h3>
+                <h3 class="text-2xl font-semibold mb-8 text-center text-gray-800"><i class="fas fa-bomb mr-2 text-gray-600"></i>Weaponized Toolkit</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas fa-bug text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">Burp Suite</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fab fa-python text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">Custom Scripts</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas fa-fingerprint text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">fingerweb</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas fa-key text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">jwt_exploit</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas fa-terminal text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">Kali Linux</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fab fa-git-alt text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">git-dumper</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fas fa-database text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">SQLMap</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                        <i class="fab fa-docker text-3xl text-gray-700 mb-2"></i>
-                        <p class="text-gray-700">Docker (Env Repro)</p>
-                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200"><i class="fas fa-bug text-3xl text-gray-700 mb-2"></i><p class="text-gray-700">Burp Suite</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200"><i class="fab fa-python text-3xl text-gray-700 mb-2"></i><p class="text-gray-700">Custom Scripts</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200"><i class="fas fa-fingerprint text-3xl text-gray-700 mb-2"></i><p class="text-gray-700">fingerweb</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200"><i class="fas fa-key text-3xl text-gray-700 mb-2"></i><p class="text-gray-700">jwt_exploit</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200"><i class="fas fa-terminal text-3xl text-gray-700 mb-2"></i><p class="text-gray-700">Kali Linux</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200"><i class="fab fa-git-alt text-3xl text-gray-700 mb-2"></i><p class="text-gray-700">git-dumper</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200"><i class="fas fa-database text-3xl text-gray-700 mb-2"></i><p class="text-gray-700">SQLMap</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200"><i class="fab fa-docker text-3xl text-gray-700 mb-2"></i><p class="text-gray-700">Docker</p></div>
                 </div>
             </div>
         </div>
@@ -408,64 +227,63 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">
-                Offensive Security Projects
-            </h2>
-
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">Offensive Security Projects</h2>
             <div id="github-projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projects injected here -->
+                <!-- Projects injected here via JS -->
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="py-20">
+    <!-- NgorbIT Series Section (UPDATED: 1 BARIS MENDATAR / HORIZONTAL) -->
+    <section id="ngorbit" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 gradient-text">
-                Thinking in Public
-            </h2>
-            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
-                Technical reflections, security fiction, and lessons learned — because the best defenses are built with
-                attacker empathy.
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">🎙️ NgorbIT Series</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+                Ngobrol Soal IT — Deep dive technical discussions, security research, and real-world case studies.
             </p>
-
-            <div id="medium-posts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Medium posts injected here -->
+            
+            <!-- UBAHAN DISINI: grid md:grid-cols-3 agar berjajar ke samping -->
+            <div id="ngorbit-posts" class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- NgorbIT posts injected here via JS -->
             </div>
-
-            <div class="text-center mt-12">
-                <a href="https://medium.com/@goodnightdev  " target="_blank"
-                    class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                    View All Posts
+            
+            <div class="text-center mt-10">
+                <a href="https://medium.com/@goodnightdev" target="_blank" class="text-gray-800 hover:text-gray-600 font-semibold">
+                    Lihat Semua Episode di Medium →
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Blog Section (Fiction) -->
+    <section id="blog" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 gradient-text">Thinking in Public</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+                Security fiction and creative reflections — because the best defenses are built with attacker empathy.
+            </p>
+            <div id="medium-posts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Fiction posts injected here via JS -->
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">
-                Get In Touch
-            </h2>
-
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">Get In Touch</h2>
             <div class="grid md:grid-cols-1 gap-12 max-w-4xl mx-auto">
                 <div class="terminal-box">
                     <div class="text-gray-600 mb-4">
-                        <span class="text-gray-800 font-semibold">dev@portfolio</span>:<span
-                            class="text-blue-600">~</span>$ contact --info
+                        <span class="text-gray-800 font-semibold">dev@portfolio</span>:<span class="text-blue-600">~</span>$ contact --info
                     </div>
                     <div class="space-y-4 text-gray-700">
                         <p><i class="fas fa-envelope text-gray-600 mr-3"></i> 01achmadismail@gmail.com</p>
-                        <p><i class="fab fa-linkedin text-gray-600 mr-3"></i> linkedin.com/in/achmad-isma-il-a9b3831a5
-                        </p>
+                        <p><i class="fab fa-linkedin text-gray-600 mr-3"></i> linkedin.com/in/achmad-isma-il-a9b3831a5</p>
                         <p><i class="fab fa-github text-gray-600 mr-3"></i> github.com/achmadismail173</p>
-                        <p><i class="fab fa-twitter text-gray-600 mr-3"></i> twitter.com/-</p>
                     </div>
                     <div class="text-gray-600 mt-4">
-                        <span class="text-gray-800 font-semibold">dev@portfolio</span>:<span
-                            class="text-blue-600">~</span>$ _
+                        <span class="text-gray-800 font-semibold">dev@portfolio</span>:<span class="text-blue-600">~</span>$ _
                     </div>
                 </div>
             </div>
@@ -473,179 +291,161 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-8">
+    <footer class="bg-gray-50 border-t border-gray-200 py-8">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-                    <i class="fab fa-github text-xl"></i>
-                </a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-                    <i class="fab fa-linkedin text-xl"></i>
-                </a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-                    <i class="fab fa-twitter text-xl"></i>
-                </a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-                    <i class="fas fa-blog text-xl"></i>
-                </a>
+                <a href="https://github.com/achmadismail173" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://linkedin.com/in/achmad-isma-il-a9b3831a5" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="https://medium.com/@goodnightdev" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors"><i class="fas fa-blog text-xl"></i></a>
             </div>
-            <p class="text-gray-600">&copy; 2025 Ismail — Independent Pentester | Bug Bounty Hunter | Responsible
-                Disclosure Advocate</p>
+            <p class="text-gray-600 text-sm">&copy; 2026 Ismail — Independent Pentester | Bug Bounty Hunter</p>
         </div>
     </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script>
         const MEDIUM_RSS = "https://medium.com/feed/@goodnightdev";
         const GITHUB_USER = "achmadismail173";
+        const PROXY_URL = "https://my-cors-proxy-main.vercel.app/api/proxy";
+        
         const container_blog = document.getElementById("medium-posts");
+        const container_ngorbit = document.getElementById("ngorbit-posts");
         const container_project = document.getElementById("github-projects");
-        // HANYA JUDUL INI YANG DITAMPILKAN
-        const ALLOWED_TITLES = [
-            "Epsilon",
-            "Puzzle Node",
-            "Di Antara Sinyal dan Rindu"
-        ];
+        
+        const ALLOWED_FICTION_TITLES = ["Epsilon", "Puzzle Node", "Di Antara Sinyal dan Rindu"];
 
         const FEATURED_REPOS = {
-            fingerweb: {
-                icon: "fa-fingerprint",
-                tags: ["Python", "Fingerprinting", "Web Tech"]
-            },
-            jwt_exploit: {
-                icon: "fa-key",
-                tags: ["JWT", "Security", "Exploit"]
-            },
-            larascan: {
-                icon: "fa-bug",
-                tags: ["Laravel", "Scanner", "WIP"]
-            }
+            fingerweb: { icon: "fa-fingerprint", tags: ["Python", "Fingerprinting", "Web Tech"] },
+            jwt_exploit: { icon: "fa-key", tags: ["JWT", "Security", "Exploit"] },
+            larascan: { icon: "fa-bug", tags: ["Laravel", "Scanner", "WIP"] }
         };
 
-
+        // 1. FETCH GITHUB PROJECTS
         Object.keys(FEATURED_REPOS).forEach(repo => {
             fetch(`https://api.github.com/repos/${GITHUB_USER}/${repo}`)
                 .then(res => res.json())
                 .then(data => {
                     if (!data.name) return;
-
                     const meta = FEATURED_REPOS[repo];
-
-                    const tagsHTML = meta.tags.map(tag => `
-        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm border border-gray-200">
-          ${tag}
-        </span>
-      `).join("");
-
-                    const card = `
-        <div class="project-card p-6">
-          <div class="mb-4 text-center">
-            <i class="fas ${meta.icon} text-5xl text-gray-700 mb-3"></i>
-          </div>
-
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">
-            ${data.name}
-          </h3>
-
-          <p class="text-gray-600 mb-4">
-            ${data.description || "Security-focused open source project."}
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-4">
-            ${tagsHTML}
-          </div>
-
-          <a href="${data.html_url}" target="_blank"
-            class="text-gray-800 hover:text-gray-600 transition-colors font-semibold">
-            View on GitHub →
-          </a>
-        </div>
-      `;
-
+                    const tagsHTML = meta.tags.map(tag => `<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm border border-gray-200">${tag}</span>`).join("");
+                    const card = `<div class="project-card p-6"><div class="mb-4 text-center"><i class="fas ${meta.icon} text-5xl text-gray-700 mb-3"></i></div><h3 class="text-xl font-semibold mb-2 text-gray-800">${data.name}</h3><p class="text-gray-600 mb-4">${data.description || "Security-focused open source project."}</p><div class="flex flex-wrap gap-2 mb-4">${tagsHTML}</div><a href="${data.html_url}" target="_blank" class="text-gray-800 hover:text-gray-600 transition-colors font-semibold">View on GitHub →</a></div>`;
                     container_project.insertAdjacentHTML("beforeend", card);
-                });
+                }).catch(err => console.error("GitHub fetch error:", err));
         });
 
-        fetch("https://api.allorigins.win/get?url="+encodeURIComponent(MEDIUM_RSS))
-            .then(res => res.json())
-            .then(data => {
+        // 2. FETCH MEDIUM RSS (SINGLE REQUEST, SPLIT DATA)
+        // 2. FETCH MEDIUM RSS (SINGLE REQUEST, SPLIT DATA)
+        fetch(`${PROXY_URL}?url=${encodeURIComponent(MEDIUM_RSS)}`)
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                return res.text();
+            })
+            .then(xmlString => {
                 const parser = new DOMParser();
-                const xml = parser.parseFromString(data.contents, "text/xml");
-                const items = xml.querySelectorAll("item");
+                const xml = parser.parseFromString(xmlString, "text/xml");
+                if (xml.querySelector("parsererror")) throw new Error("Invalid XML format");
 
-                container_blog.innerHTML = "";
+                const items = Array.from(xml.querySelectorAll("item"));
 
-                Array.from(items).forEach(item => {
-                    const title = item.querySelector("title")?.textContent?.trim();
-                    if (!ALLOWED_TITLES.includes(title)) return;
-
-                    const link = item.querySelector("link")?.textContent || "";
-                    const pubDateRaw = item.querySelector("pubDate")?.textContent || "";
-                    const pubDate = new Date(pubDateRaw).toLocaleDateString("en-US", {
-                        year: "numeric", month: "long", day: "numeric"
-                    });
-
-                    const contentEncoded =
-                        item.getElementsByTagName("content:encoded")[0]?.textContent || "";
-
-                    const htmlDoc = new DOMParser().parseFromString(contentEncoded, "text/html");
-
-                    const img = htmlDoc.querySelector("img");
-                    const imgSrc = img ? img.src : "";
-
-                    const p = htmlDoc.querySelector("p");
-                    const excerpt = p ? p.textContent.slice(0, 140) + "..." : "";
-
-                    const card = `
-        <div class="blog-card p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <div class="mb-4">
-            ${imgSrc
-                            ? `<img src="${imgSrc}" class="w-full h-48 object-cover rounded-lg">`
-                            : `<div class="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
-                     <i class="fas fa-book text-4xl text-gray-400"></i>
-                   </div>`
+                // Helper function untuk extract deskripsi yang robust
+                function extractDescription(item) {
+                    // Coba 1: Ambil dari <description>
+                    let desc = item.querySelector("description")?.textContent?.trim();
+                    
+                    // Coba 2: Jika kosong, ambil dari <content:encoded>
+                    if (!desc) {
+                        const contentEncoded = item.getElementsByTagName("content:encoded")[0]?.textContent;
+                        if (contentEncoded) {
+                            // Parse HTML dan ambil text dari paragraf pertama
+                            const htmlDoc = new DOMParser().parseFromString(contentEncoded, "text/html");
+                            const p = htmlDoc.querySelector("p");
+                            desc = p ? p.textContent.trim() : "";
                         }
-          </div>
+                    }
+                    
+                    // Coba 3: Jika masih kosong, ambil title sebagai fallback
+                    if (!desc) {
+                        desc = item.querySelector("title")?.textContent?.trim() || "No description available";
+                    }
+                    
+                    // Bersihkan dari tag HTML yang mungkin tersisa
+                    desc = desc.replace(/<[^>]*>/g, '').trim();
+                    
+                    return desc;
+                }
 
-          <span class="text-sm text-gray-500 mb-2 block">
-            ${pubDate} • Security Fiction
-          </span>
-
-          <h3 class="text-xl font-semibold mb-3 text-gray-800">
-            ${title}
-          </h3>
-
-          <p class="text-gray-600 mb-4">
-            ${excerpt}
-          </p>
-
-          <a href="${link}" target="_blank"
-            class="text-gray-800 hover:text-gray-600 transition-colors font-semibold">
-            Read Story →
-          </a>
-        </div>
-      `;
-
-                    container_blog.insertAdjacentHTML("beforeend", card);
+                // --- A. Process NgorbIT Series ---
+                const ngorbitItems = items.filter(item => {
+                    const title = item.querySelector("title")?.textContent?.trim() || "";
+                    return title.toLowerCase().includes("ngorbit");
                 });
 
-                if (container_blog.innerHTML.trim() === "") {
-                    container_blog.innerHTML = "<p>No curated stories available.</p>";
+                if (ngorbitItems.length > 0) {
+                    ngorbitItems.forEach(item => {
+                        const title = item.querySelector("title")?.textContent?.trim();
+                        const link = item.querySelector("link")?.textContent || "";
+                        const date = new Date(item.querySelector("pubDate")?.textContent).toLocaleDateString("id-ID", { year: 'numeric', month: 'long', day: 'numeric' });
+                        
+                        // Gunakan helper function yang sudah diperbaiki
+                        const desc = extractDescription(item);
+                        const descShort = desc.length > 100 ? desc.slice(0, 100) + "..." : desc;
+
+                        const card = `
+                            <div class="ngorbit-card p-6 bg-gray-50 border-l-4 border-gray-800 h-full">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">️ Episode</span>
+                                    <span class="text-xs text-gray-500">${date}</span>
+                                </div>
+                                <h3 class="text-lg font-semibold mb-3 text-gray-800 leading-tight line-clamp-3">${title}</h3>
+                                <p class="text-sm text-gray-600 mb-4 leading-relaxed flex-grow line-clamp-3">${descShort}</p>
+                                <a href="${link}" target="_blank" class="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors mt-auto">
+                                    Baca Episode <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                                </a>
+                            </div>
+                        `;
+                        container_ngorbit.insertAdjacentHTML("beforeend", card);
+                    });
+                } else {
+                    container_ngorbit.innerHTML = `<p class="col-span-3 text-center text-gray-500 py-10">Belum ada episode NgorbIT.</p>`;
+                }
+
+                // --- B. Process Fiction Stories ---
+                const fictionItems = items.filter(item => {
+                    const title = item.querySelector("title")?.textContent?.trim() || "";
+                    return ALLOWED_FICTION_TITLES.includes(title);
+                });
+
+                if (fictionItems.length > 0) {
+                    fictionItems.forEach(item => {
+                        const title = item.querySelector("title")?.textContent?.trim();
+                        const link = item.querySelector("link")?.textContent || "";
+                        const pubDate = new Date(item.querySelector("pubDate")?.textContent).toLocaleDateString("id-ID", { year: "numeric", month: "long", day: "numeric" });
+                        const contentEncoded = item.getElementsByTagName("content:encoded")[0]?.textContent || "";
+                        const htmlDoc = new DOMParser().parseFromString(contentEncoded, "text/html");
+                        const img = htmlDoc.querySelector("img");
+                        const imgSrc = img ? img.src : "";
+                        const p = htmlDoc.querySelector("p");
+                        const excerpt = p ? p.textContent.replace(/<[^>]*>/g, '').slice(0, 140) + "..." : "Klik untuk membaca cerita...";
+
+                        const card = `<div class="blog-card p-6 bg-white rounded-xl shadow hover:shadow-lg transition"><div class="mb-4">${imgSrc ? `<img src="${imgSrc}" class="w-full h-48 object-cover rounded-lg" alt="${title}">` : `<div class="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center"><i class="fas fa-book text-4xl text-gray-400"></i></div>`}</div><span class="text-sm text-gray-500 mb-2 block">${pubDate} • Security Fiction</span><h3 class="text-xl font-semibold mb-3 text-gray-800">${title}</h3><p class="text-gray-600 mb-4">${excerpt}</p><a href="${link}" target="_blank" class="text-gray-800 hover:text-gray-600 transition-colors font-semibold">Read Story →</a></div>`;
+                        container_blog.insertAdjacentHTML("beforeend", card);
+                    });
+                } else {
+                    container_blog.innerHTML = `<p class="col-span-full text-center text-gray-500 py-10">Belum ada cerita fiksi.</p>`;
                 }
             })
             .catch(err => {
-                container_blog.innerHTML = "<p>Failed to load blog posts.</p>";
-                console.error(err);
+                console.error("Medium RSS Fetch Error:", err);
+                container_ngorbit.innerHTML = `<p class="col-span-3 text-center text-red-500 py-10">Gagal memuat NgorbIT.</p>`;
+                container_blog.innerHTML = `<p class="col-span-full text-center text-red-500 py-10">Gagal memuat cerita.</p>`;
             });
-    </script>
 
-
-
-
-    <script>
-
+        // 3. UI EFFECTS
         const text = "Building secure systems — then breaking them ethically.";
-        const typingSpeed = 40; // ms per character
+        const typingSpeed = 40; 
         const element = document.getElementById('typing-text');
         let index = 0;
+        
         function type() {
             if (index < text.length) {
                 element.textContent += text.charAt(index);
@@ -653,65 +453,16 @@
                 setTimeout(type, typingSpeed);
             }
         }
-        window.onload = () => {
-            type();
-        };
+        
+        window.onload = () => { type(); };
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
-
-        // Animate skill bars on scroll
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 500);
-            });
-        }
-
-        // Intersection Observer for skill bars animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateSkillBars();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const skillsSection = document.getElementById('skills');
-        if (skillsSection) {
-            observer.observe(skillsSection);
-        }
-
-        // Form submission handling
-        const contactForm = document.querySelector('form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-            });
-        }
     </script>
 </body>
-
-
 </html>
-
-
-
